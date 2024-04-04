@@ -7,3 +7,5 @@ C
 azure-pipelines.yml,4\0\40ebc6823f24f296c0cd3fddd6ccda69b74ff2e4
 h
 8src/main/java/com/apirest/controller/TestController.java,1\9\1957af4a4bf2961490cf2a55a4d7a4bf1122123e
+?
+settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
