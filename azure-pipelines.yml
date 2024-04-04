@@ -10,6 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- task: replacetokens@6
+  inputs:
+    root: '$(System.DefaultWorkingDirectory)'
+    sources: 'application.yml'
+
+
 - task: Gradle@2
   inputs:
     workingDirectory: ''
