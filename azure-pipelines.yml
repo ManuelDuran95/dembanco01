@@ -64,6 +64,10 @@ steps:
   inputs:
     SonarQube: 'sqc-ManuelMata-quiz'
     scannerMode: 'Other'
+    projectKey: '$(Build.Repository.Name)-KEY'
+    projectName: '$(Build.Repository.Name)'
+    projectVersion: 'ManuelMata-Quiz'
+
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME'
