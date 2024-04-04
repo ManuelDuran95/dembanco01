@@ -11,7 +11,7 @@ pool:
 
 steps:
 
-- task: ReplaceTokens@3
+- task: ReplaceTokens@5
   inputs:
     targetFiles: '**/application.yml'
     tokenPrefix: '#{'
@@ -23,7 +23,7 @@ steps:
     verbosity: 'detailed'
     tokens:
     user: $(ManuelMata_LIB.user)
-    pass: $(ManuelMata_LIB.pass) 
+    pass: $(ManuelMata_LIB.pass)
 
 
 - task: Gradle@2
