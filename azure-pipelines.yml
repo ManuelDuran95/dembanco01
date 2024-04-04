@@ -59,8 +59,4 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo' # 'Cobertura' | 'JaCoCo'. Required. Code coverage tool. Default: JaCoCo.
-    summaryFileLocation: # string. Required. Summary file.
-    #pathToSources: # string. Path to Source files.
-    #reportDirectory: # string. Report directory.
-    #additionalCodeCoverageFiles: # string. Additional files.
-    #failIfCoverageEmpty: false # boolean. Fail when code coverage results are missing. Default: false.
+    summaryFileLocation: '$(Build.ArtifactStagingDirectory)/build/cobertura/coverage.xml'
