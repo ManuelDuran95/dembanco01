@@ -46,5 +46,5 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.StagingDirectory)'
-    ArtifactName: 'RESP001'
+    artifactName: drop
     publishLocation: 'Container'
