@@ -11,10 +11,19 @@ pool:
 
 steps:
 
-- task: replacetokens@6
+- task: ReplaceTokens@3
   inputs:
-    root: '$(System.DefaultWorkingDirectory)'
-    sources: 'application.yml'
+    targetFiles: '**/application.yml'
+    tokenPrefix: '#{'
+    tokenSuffix: '}#'
+    escapeType: 'none'
+    actionOnMissing: 'warn'
+    enableTransforms: true
+    useLegacyPattern: false
+    verbosity: 'detailed'
+    tokens:
+    user: $(ManuelMata_LIB.user)
+    pass: $(ManuelMata_LIB.pass) 
 
 
 - task: Gradle@2
