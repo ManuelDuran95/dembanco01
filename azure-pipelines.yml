@@ -13,17 +13,18 @@ steps:
 
 - task: ReplaceTokens@5
   inputs:
-    targetFiles: '**/application.yml'
-    tokenPrefix: '#{'
-    tokenSuffix: '}#'
-    escapeType: 'none'
-    actionOnMissing: 'warn'
-    enableTransforms: true
-    useLegacyPattern: false
-    verbosity: 'detailed'
-    tokens:
-    user: $(ManuelMata_LIB.user)
-    pass: $(ManuelMata_LIB.pass)
+   targetFiles: '**/application.yml'
+   encoding: 'auto'
+   tokenPattern: 'default'
+   writeBOM: true
+   actionOnMissing: 'warn'
+   keepToken: false
+   actionOnNoFiles: 'continue'
+   enableTransforms: false
+   enableRecursion: false
+   useLegacyPattern: false
+   enableTelemetry: true
+
 
 
 - task: Gradle@2
