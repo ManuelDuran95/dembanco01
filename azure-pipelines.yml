@@ -60,3 +60,7 @@ steps:
   inputs:
     codeCoverageTool: 'JaCoCo' # 'Cobertura' | 'JaCoCo'. Required. Code coverage tool. Default: JaCoCo.
     summaryFileLocation: '$(Build.ArtifactStagingDirectory)/build/cobertura/coverage.xml'
+
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
